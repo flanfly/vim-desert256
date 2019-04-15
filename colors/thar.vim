@@ -269,6 +269,10 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     "Error
     call <SID>X("Todo", "ff4500", "eeee00", "")
 
+    " Style Pmenu (completition popup) as grey30/grey20
+    call <SID>X("Pmenu", "cccccc", "4d4d4d", "")
+    call <SID>X("PmenuSel", "ffd700", "333333", "bold")
+
     " delete functions {{{
     delf <SID>X
     delf <SID>rgb
@@ -316,6 +320,8 @@ else
     hi Underlined    cterm=underline ctermfg=5
     hi Ignore        ctermfg=darkgrey
     hi Error         cterm=bold ctermfg=7 ctermbg=1
+    hi Pmenu         ctermbg=242
+    hi PmenuSel      cterm=bold
 endif
 
 " vim: set fdl=0 fdm=marker:
